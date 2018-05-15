@@ -49,7 +49,9 @@ git config
     * `git log --grep="bugs"`: Returns all the commits that has the string 'bugs' in the commit message
     * `git log HEAD`: Returns all the commits starting from the HEAD of the current branch
 * `git status`: Reports to us the difference between the working directory, the staging index, and the repository
-*   
+* `git diff`: Compare two files between the working directory and the other directories
+    * `git diff --staged`: Return the changes between the staging directory and the other directories
+* `  
 
 #### Git Commit Message Etiquette
 * Keep the message a short single-line summary (less than 50 characters) orr
