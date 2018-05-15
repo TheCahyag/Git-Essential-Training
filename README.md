@@ -42,6 +42,7 @@ git config
 * `git commit`: Commit the change
     * `git commit -m "Message"`: Commit with a message
     * `git commit -a`: Add all modified messages to the staging index and commit them
+    * `git commit --amend`: Add changes that are in stage to the last commit
 * `git log`: Show a log of all the commits made
     * `git log -n #`: Will return the last # commits from the log
     * `git log --since=2018-05-15`: Returns all commits since a specific date
@@ -55,13 +56,14 @@ git config
     * `git diff --color-words`: Returns the changes, but instead of using two lines for a change it will only show the part of the line that was changed
 * `git rm FILE`: Delete FILE from git and the repo, the change is already added to staging index
 * `git mv OLD_FILE NEW_FILE`: Rename OLD_FILE to NEW_FILE and will add it to the staging index  
-
+* `git checkout -- FILE`: Get the repo's version of FILE in the current branch (--) and replace the working directories version
+* `git reset HEAD FILE`: Reset FILE to the version of the file that is in the HEAD commit
 
 
 #### Git Commit Message Etiquette
 * Keep the message a short single-line summary (less than 50 characters) orr
 * Optionally followed by a blank line and a more complete description
-* Bullet points are usally asterisks or hyphens
+* Bullet points are usually asterisks or hyphens
 * You can add "ticket tracking numbers" from bugs or support requests
 Example:  
 Bad - "Fix typo"  
@@ -70,7 +72,12 @@ Good - "Added missing > in project section of HTML"
 #### Git HEAD
 A pointer to the "tip" of the current branch in the repo, at any given time there is only one HEAD  
   
-  
+#### Git Reset
+git reset  
+    --soft, does not change staging index or working directory
+    --mixed (default), changes staging index to match repository and does not change working directory
+    --hard, changes staging index and working directory to match repository
+
 
 
 
