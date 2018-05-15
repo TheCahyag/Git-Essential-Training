@@ -38,4 +38,52 @@ git config
 * `git help`: List a bunch of helpful and most used commands
     * `git help log`: Pulls up the Git Manual for the `log` command
 * `git init`: Initialise a git repository
+* `git add .`: Add all the files in the current directory to the git repo
+* `git commit`: Commit the change
+    * `git commit -m "Message"`: Commit with a message
+* `git log`: Show a log of all the commits made
+    * `git log -n #`: Will return the last # commits from the log
+    * `git log --since=2018-05-15`: Returns all commits since a specific date
+    * `git log --until=2018-05015`: Returns all commits up to a specific date
+    * `git log --author="Kevin"`: Returns all commits from Kevin
+    * `git log --grep="bugs"`: Returns all the commits that has the string 'bugs' in the commit message
+    * `git log HEAD`: Returns all the commits starting from the HEAD of the current branch
+* `git status`: Reports to us the difference between the working directory, the staging index, and the repository
+*   
+
+#### Git Commit Message Etiquette
+* Keep the message a short single-line summary (less than 50 characters) orr
+* Optionally followed by a blank line and a more complete description
+* Bullet points are usally asterisks or hyphens
+* You can add "ticket tracking numbers" from bugs or support requests
+Example:  
+Bad - "Fix typo"  
+Good - "Added missing > in project section of HTML"
+
+#### Git HEAD
+A pointer to the "tip" of the current branch in the repo, at any given time there is only one HEAD  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
