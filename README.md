@@ -41,6 +41,7 @@ git config
 * `git add .`: Add all the files in the current directory to the git repo
 * `git commit`: Commit the change
     * `git commit -m "Message"`: Commit with a message
+    * `git commit -a`: Add all modified messages to the staging index and commit them
 * `git log`: Show a log of all the commits made
     * `git log -n #`: Will return the last # commits from the log
     * `git log --since=2018-05-15`: Returns all commits since a specific date
@@ -51,7 +52,11 @@ git config
 * `git status`: Reports to us the difference between the working directory, the staging index, and the repository
 * `git diff`: Compare two files between the working directory and the other directories
     * `git diff --staged`: Return the changes between the staging directory and the other directories
-* `  
+    * `git diff --color-words`: Returns the changes, but instead of using two lines for a change it will only show the part of the line that was changed
+* `git rm FILE`: Delete FILE from git and the repo, the change is already added to staging index
+* `git mv OLD_FILE NEW_FILE`: Rename OLD_FILE to NEW_FILE and will add it to the staging index  
+
+
 
 #### Git Commit Message Etiquette
 * Keep the message a short single-line summary (less than 50 characters) orr
