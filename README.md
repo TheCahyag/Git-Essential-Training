@@ -27,11 +27,11 @@ Located at my_project/.git/config
 git config  
 
 #### Modifying Configs
-* List all current configurations set: git config --list
-* Set name: git config --global user.name "Brandon Bires-Navel"
-* Set email: git config --global user.email "brandonnavel@outlook.com"
-* Tell Git what text editor you want to use: git config --global core.editor "vim"
-* Tell Git to use colors when printing to the command line: git config --global color.ui true
+* `git config --list`: List all current configurations set
+* `git config --global user.name "Brandon Bires-Navel"`: Set name
+* `git config --global user.email "brandonnavel@outlook.com"`: Set email
+* `git config --global core.editor "vim"`: Tell Git what text editor you want to use
+* `git config --global color.ui true`: Tell Git to use colors when printing to the command line
 
 ### Git Commands
 
