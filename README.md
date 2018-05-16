@@ -78,9 +78,21 @@ git reset
     --mixed (default), changes staging index to match repository and does not change working directory
     --hard, changes staging index and working directory to match repository
 
+#### Git Ignore Files
+Some syntax may include:
+* Normal regular expression stuff
+    * `*.php`: Any file that ends in '.php'
+    * `!index.php`: Even though all .php files are ignored, don't ignore index.php
+* Trailing `/` will include all files in a folder
+    * `assets/videos/` will ignore all files in the videos folder
+* Comments are after `#`
 
-
-
+##### Files you would likely want to ignore
+* Compiled source code
+* Packages and compressed files (.zip, .tar, .rar, .etc)
+* Logs and databases
+* Operating system generated files
+* User-uploaded assets (images, PDFs, videos)
 
 
 
