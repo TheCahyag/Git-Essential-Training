@@ -75,6 +75,12 @@ git config
 * `git checkout BRANCH`: Switch to the BRANCH branch
     * `git checkout -b NEW_BRANCH`: Create a new branch and switch to it
 * `git merge BRANCH`: Merge BRANCH into the current branch
+    * `git merge --ff-only BRANCH`: Only merge BRANCH into the current directory if a fast-forward merge can be done, otherwise abort
+    * `git merge --abort`: Abort the current merge
+* `git stash save "message for stash"`: Stash changes to move to a different branch
+    * `git stash list`: List all the stashes availiable
+* `git fetch origin`: Fetchs data from the origin remote repo
+
 #### Git Commit Message Etiquette
 * Keep the message a short single-line summary (less than 50 characters) orr
 * Optionally followed by a blank line and a more complete description
@@ -120,6 +126,20 @@ Some syntax may include:
 #### Git Branches
 Branches are cheap and all you to try new ideas without having to make a bunch of commits to master and subsequently reverting those changes if things don't work out.  
 
+#### Git Merge
+
+##### Merge Conflicts
+If you merge two branches that conflict a new branch will be created named `branch|MERGING` inwhich you will need to go through the files that are conflicting (which can be seen with `git status`) or alternatively you can abort the merge by running `git merge --abort`.  
+  
+After you have resolved the conflicts, you need to add the changes with `git add file` and then `git commit` with no message. The branch will then continue with the merge.    
+  
+##### Tips to avoid conflicts
+* Keep lines short
+* Keep comments small and focused
+* Beware stray edits to whitespace
+    * spaces, tabs, line returns
+* Merge often
+* Track changes to master, while editing another branch always add the changes that are occuring in master using `git merge master` when in your other branch (this is called tracking)
 
 
 
