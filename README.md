@@ -46,7 +46,7 @@ git config
 * `git log`: Show a log of all the commits made
     * `git log -n #`: Will return the last # commits from the log
     * `git log --since=2018-05-15`: Returns all commits since a specific date
-    * `git log --until=2018-05015`: Returns all commits up to a specific date
+    * `git log --until=2018-05-15`: Returns all commits up to a specific date
     * `git log --author="Kevin"`: Returns all commits from Kevin
     * `git log --grep="bugs"`: Returns all the commits that has the string 'bugs' in the commit message
     * `git log HEAD`: Returns all the commits starting from the HEAD of the current branch
