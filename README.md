@@ -78,7 +78,7 @@ git config
     * `git merge --ff-only BRANCH`: Only merge BRANCH into the current directory if a fast-forward merge can be done, otherwise abort
     * `git merge --abort`: Abort the current merge
 * `git stash save "message for stash"`: Stash changes to move to a different branch
-    * `git stash list`: List all the stashes availiable
+    * `git stash list`: List all the stashes available 
 * `git fetch origin`: Fetchs data from the origin remote repo
 
 #### Git Commit Message Etiquette
@@ -129,7 +129,7 @@ Branches are cheap and all you to try new ideas without having to make a bunch o
 #### Git Merge
 
 ##### Merge Conflicts
-If you merge two branches that conflict a new branch will be created named `branch|MERGING` inwhich you will need to go through the files that are conflicting (which can be seen with `git status`) or alternatively you can abort the merge by running `git merge --abort`.  
+If you merge two branches that conflict a new branch will be created named `branch|MERGING` in which you will need to go through the files that are conflicting (which can be seen with `git status`) or alternatively you can abort the merge by running `git merge --abort`.  
   
 After you have resolved the conflicts, you need to add the changes with `git add file` and then `git commit` with no message. The branch will then continue with the merge.    
   
@@ -139,10 +139,23 @@ After you have resolved the conflicts, you need to add the changes with `git add
 * Beware stray edits to whitespace
     * spaces, tabs, line returns
 * Merge often
-* Track changes to master, while editing another branch always add the changes that are occuring in master using `git merge master` when in your other branch (this is called tracking)
+* Track changes to master, while editing another branch always add the changes that are occurring in master using `git merge master` when in your other branch (this is called tracking)
 
+#### Git Fetch
+Fetching is not harmful at all  
+* Fetch before you work
+* Fetch before you push
+* Fetch often
+  
+After you fetch you can decide what you want to do with the new data, be it merging or not doing anything  
 
-
+#### Git Alias
+`git config --global alias.co checkout`
+`git config --global alias.ci commit`
+`git config --global alias.br branch`
+`git config --global alias.df diff`
+`git config --global alias.dfs "diff --staged"`
+`git config --global alias.logg "log --graph --decorate --oneline --abbrev-commit --all"`
 
 
 
