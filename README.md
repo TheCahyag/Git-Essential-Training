@@ -71,9 +71,10 @@ git config
     * `git branch NEW_BRANCH`: Create branch NEW_BRANCH
     * `git branch --merged`: Shows all the branches that are completely included in the current branch
     * `git branch -m OLD_BRANCH NEW_BRANCH`: Rename OLD_BRANCH to NEW_BRANCH
+    * `git branch -d BRANCH_NAME`: Delete branch BRANCH_NAME, given there are no unmerged commits
 * `git checkout BRANCH`: Switch to the BRANCH branch
     * `git checkout -b NEW_BRANCH`: Create a new branch and switch to it
-
+* `git merge BRANCH`: Merge BRANCH into the current branch
 #### Git Commit Message Etiquette
 * Keep the message a short single-line summary (less than 50 characters) orr
 * Optionally followed by a blank line and a more complete description
