@@ -74,9 +74,9 @@ A pointer to the "tip" of the current branch in the repo, at any given time ther
   
 #### Git Reset
 git reset  
-    --soft, does not change staging index or working directory
-    --mixed (default), changes staging index to match repository and does not change working directory
-    --hard, changes staging index and working directory to match repository
+    --soft, does not change staging index or working directory  
+    --mixed (default), changes staging index to match repository and does not change working directory  
+    --hard, changes staging index and working directory to match repository  
 
 #### Git Ignore Files
 Some syntax may include:
@@ -94,6 +94,8 @@ Some syntax may include:
 * Operating system generated files
 * User-uploaded assets (images, PDFs, videos)
 
+##### Global Git Ignore Files
+`git config --global core.excludesfile ~/.gitignore_global`: Set the .gitignore file for the user rather than the repo  
 
 
 
