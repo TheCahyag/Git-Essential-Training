@@ -37,7 +37,7 @@ git config
 
 * `git help`: List a bunch of helpful and most used commands
     * `git help log`: Pulls up the Git Manual for the `log` command
-* `git init`: Initialise a git repository
+* `git init`: Initialize a git repository
 * `git add .`: Add all the files in the current directory to the git repo
 * `git commit`: Commit the change
     * `git commit -m "Message"`: Commit with a message
@@ -53,6 +53,7 @@ git config
     * `git log --oneline`: Returns the log where each commit only takes up one line
     * `git log --oneline -4`: Returns the last 4 entries of the log where each commit only takes up one line
     * `git log c4bd56.. index.html`: Returns all commits that are related to index.html
+    * `git log --graph --oneline --decorate --all`: Get changes from all branches as one line commits
 * `git status`: Reports to us the difference between the working directory, the staging index, and the repository
 * `git diff`: Compare two files between the working directory and the other directories
     * `git diff --staged`: Return the changes between the staging directory and the other directories
@@ -60,6 +61,7 @@ git config
     * `git diff SHA-1`: Returns the differences between the working directory and the commit specified
     * `git diff SHA-1..SHA-1`: Returns the differences between two different the repo in two different commits
     * `git diff --stat --summary SHA-1..SHA-1`: Show a summary of changes between two versions of the repo and give some statistics on the changes
+    * `git diff master..other_branch`: Shows the differences between the tip of master and the tip of other_branch
 * `git rm FILE`: Delete FILE from git and the repo, the change is already added to staging index
 * `git mv OLD_FILE NEW_FILE`: Rename OLD_FILE to NEW_FILE and will add it to the staging index  
 * `git checkout -- FILE`: Get the repo's version of FILE in the current branch (--) and replace the working directories version
@@ -67,8 +69,10 @@ git config
 * `git show SHA-1`: Show the changes made in a specific commit
 * `git branch`: Show all the branches that are on the local machine
     * `git branch NEW_BRANCH`: Create branch NEW_BRANCH
+    * `git branch --merged`: Shows all the branches that are completely included in the current branch
+    * `git branch -m OLD_BRANCH NEW_BRANCH`: Rename OLD_BRANCH to NEW_BRANCH
 * `git checkout BRANCH`: Switch to the BRANCH branch
-
+    * `git checkout -b NEW_BRANCH`: Create a new branch and switch to it
 
 #### Git Commit Message Etiquette
 * Keep the message a short single-line summary (less than 50 characters) orr
