@@ -154,6 +154,7 @@ After you fetch you can decide what you want to do with the new data, be it merg
 `git config --global alias.ci commit`
 `git config --global alias.br branch`
 `git config --global alias.df diff`
+`git config --global alias.st status`
 `git config --global alias.dfs "diff --staged"`
 `git config --global alias.logg "log --graph --decorate --oneline --abbrev-commit --all"`
 
