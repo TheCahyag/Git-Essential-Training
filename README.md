@@ -1,5 +1,5 @@
 # Git Notes
-### Written by Brandon Bires-Navel, using [Lynda](http://www.lynda.com)'s [Git Essential Training](https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html?srchtrk=index:1%0Alinktypeid:2%0Aq:GIT%0Apage:1%0As:relevance%0Asa:true%0Aproducttypeid:2) tutorial
+#### Written by Brandon Bires-Navel, using [Lynda](http://www.lynda.com)'s [Git Essential Training](https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html?srchtrk=index:1%0Alinktypeid:2%0Aq:GIT%0Apage:1%0As:relevance%0Asa:true%0Aproducttypeid:2) tutorial
 
 ## TOC
 TODO  
@@ -50,14 +50,24 @@ git config
     * `git log --author="Kevin"`: Returns all commits from Kevin
     * `git log --grep="bugs"`: Returns all the commits that has the string 'bugs' in the commit message
     * `git log HEAD`: Returns all the commits starting from the HEAD of the current branch
+    * `git log --oneline`: Returns the log where each commit only takes up one line
+    * `git log --oneline -4`: Returns the last 4 entries of the log where each commit only takes up one line
+    * `git log c4bd56.. index.html`: Returns all commits that are related to index.html
 * `git status`: Reports to us the difference between the working directory, the staging index, and the repository
 * `git diff`: Compare two files between the working directory and the other directories
     * `git diff --staged`: Return the changes between the staging directory and the other directories
     * `git diff --color-words`: Returns the changes, but instead of using two lines for a change it will only show the part of the line that was changed
+    * `git diff SHA-1`: Returns the differences between the working directory and the commit specified
+    * `git diff SHA-1..SHA-1`: Returns the differences between two different the repo in two different commits
+    * `git diff --stat --summary SHA-1..SHA-1`: Show a summary of changes between two versions of the repo and give some statistics on the changes
 * `git rm FILE`: Delete FILE from git and the repo, the change is already added to staging index
 * `git mv OLD_FILE NEW_FILE`: Rename OLD_FILE to NEW_FILE and will add it to the staging index  
 * `git checkout -- FILE`: Get the repo's version of FILE in the current branch (--) and replace the working directories version
 * `git reset HEAD FILE`: Reset FILE to the version of the file that is in the HEAD commit
+* `git show SHA-1`: Show the changes made in a specific commit
+* `git branch`: Show all the branches that are on the local machine
+    * `git branch NEW_BRANCH`: Create branch NEW_BRANCH
+* `git checkout BRANCH`: Switch to the BRANCH branch
 
 
 #### Git Commit Message Etiquette
@@ -97,9 +107,13 @@ Some syntax may include:
 ##### Global Git Ignore Files
 `git config --global core.excludesfile ~/.gitignore_global`: Set the .gitignore file for the user rather than the repo  
 
+#### Referencing Commits
+* `HEAD^`: Find the parent commit of HEAD
+* `HEAD~3`: Find the 3rd parent commit
+* `git ls-tree HEAD`: List the files that are in the repo at the HEAD commit
 
-
-
+#### Git Branches
+Branches are cheap and all you to try new ideas without having to make a bunch of commits to master and subsequently reverting those changes if things don't work out.  
 
 
 
